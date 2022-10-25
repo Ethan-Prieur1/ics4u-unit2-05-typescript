@@ -8,17 +8,16 @@
 
 class Vehicle { 
   readonly doorAmount: number
-  private speed: number
+  private speed: number = 0
   readonly maxSpeed: number
   private colour: string
   private licensePlate: string
 
-  constructor() {
-    console.log(`Number of doors: ${doorAmount}`)
-  }
-
-  constructor() {
-    console.log(`Colour:  `)
+  constructor(colour: string, licensePlate: string, doorAmount: number, maxSpeed: number) {
+    this,colour
+    this.licensePlate
+    this.doorAmount
+    this.maxSpeed
   }
 
   // getters
@@ -30,14 +29,32 @@ class Vehicle {
     return this.licensePlate
   }
 
+  public getSpeed(): number {
+    return this.licensePlate
+  }
+
+  public getMaxSpeed(): number {
+    return this.maxSpeed
+  }
+
+  public getDoorAmount(): number {
+    return this.doorAmount
+  }
+
   // setters
-        public set colour(theColour: string) {
+        public set colour(theColour: string): void {
+                this.colour = theColour
+        }
+
+        public set licensePlate(thePlate: string): void {
+                this.licensePlate = thePlate
+        }
 
 
   // methods
-  public accelerate (accelerationPower: number, accelerationTime: number) {
+  public accelerate (accelerationPower: number, accelerationTime: number): void {
         this.speed = (accelerationPower * accelerationTime) + this.speed
-        if (speed => maxSpeed) {
+        if (speed > maxSpeed) {
             speed = maxSpeed
         }
   }
@@ -46,6 +63,16 @@ class Vehicle {
         this.speed = this.speed - (breakPower * breakTime)
         if (speed < 0) {
             speed = 0
+}
+  }
+
+  public status (): void {
+    console.log(
+      `       --> Speed: ${this.speed}
+        --> MaxSpeed: ${this.maxspeed}
+        --> Number of doors: ${this.dooramount}
+        --> License Plate: ${this.licenseplate}
+        --> Colour: ${this.colour}`
 }
 
 export = Vehicle
