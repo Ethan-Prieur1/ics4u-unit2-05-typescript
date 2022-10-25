@@ -19,8 +19,8 @@ fordFocus.accelerate(10, 10);
 console.log(`New speed: ${fordFocus.speed}`);
 
 console.log("Changing colour to black:");
-fordFocus.color = "black";
-console.log(`New color: ${fordFocus.color}`);
+fordFocus.colour = "black";
+console.log(`New colour: ${fordFocus.colour}`);
 
 console.log("");
 
@@ -39,9 +39,9 @@ console.log("Breaking, 10 of power for 10 sec.");
 ferrari.break(10, 10);
 console.log(`New speed: ${ferrari.speed}`);
 
-console.log("Changing color:");
-ferrari.color = "racing red!";
-console.log(`New color: ${ferrari.color}`);
+console.log("Changing colour:");
+ferrari.colour = "racing red!";
+console.log(`New colour: ${ferrari.colour}`);
 
 console.log("");
 
@@ -60,8 +60,8 @@ console.log("Breaking, 2 of power for 10 sec.");
 citroenAmi.break(2, 10);
 console.log(`New speed: ${citroenAmi.speed}`);
 
-console.log("Changing color:");
-citroenAmi.color = "purple";
-console.log(`New color: ${citroenAmi.color}`);
+console.log("Changing colour:");
+citroenAmi.colour = "purple";
+console.log(`New colour: ${citroenAmi.colour}`);
 
 console.log("\nDone.");

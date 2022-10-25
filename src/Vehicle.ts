@@ -1,79 +1,80 @@
 /**
- * This class creates a stack
+ * This class creates a vehicle
  *
  * By:      Ethan Prieur
  * Version: 1.0
- * Since:   2022-10-12
+ * Since:   2022-10-18
  */
 
-class Vehicle { 
-  readonly doorAmount: number
-  private speed: number = 0
-  readonly maxSpeed: number
-  private colour: string
-  private licensePlate: string
+class Vehicle {
+  public speed: number = 0
+  public maxSpeed: number
+  public doorAmount: number
+  public licesnePlate: string
+  public colour: string
 
-  constructor(colour: string, licensePlate: string, doorAmount: number, maxSpeed: number) {
-    this,colour
-    this.licensePlate
-    this.doorAmount
-    this.maxSpeed
+  constructor (colour: string, licensePlate: string, maxSpeed: number, doorAmount: number) {
+    this.licensePlate = licensePlate
+    this.colour = colour
+    this.maxSpeed = maxSpeed
+    this.doorAmount = doorAmount
   }
 
   // getters
-  public getColour(): string {
-    return this.colour
+  public getSpeed (): number {
+    return this.speed
   }
 
-  public getLicensePlate(): string {
-    return this.licensePlate
+  public getMaxSpeed (): number {
+    return this.maxspeed
   }
 
-  public getSpeed(): number {
-    return this.licensePlate
-  }
-
-  public getMaxSpeed(): number {
-    return this.maxSpeed
-  }
-
-  public getDoorAmount(): number {
+  public getDoorAmount (): number {
     return this.doorAmount
   }
 
-  // setters
-        public set colour(theColour: string): void {
-                this.colour = theColour
-        }
-
-        public set licensePlate(thePlate: string): void {
-                this.licensePlate = thePlate
-        }
-
-
-  // methods
-  public accelerate (accelerationPower: number, accelerationTime: number): void {
-        this.speed = (accelerationPower * accelerationTime) + this.speed
-        if (speed > maxSpeed) {
-            speed = maxSpeed
-        }
+  public getLicensePlate (): string {
+    return this.licensePlate
   }
 
-  public break (breakPower: number, breakTime: number) {
-        this.speed = this.speed - (breakPower * breakTime)
-        if (speed < 0) {
-            speed = 0
-}
+  public getColour (): string {
+    return this.colour
+  }
+
+  // setters
+  public setLicensePlate (thePlate: string): void {
+    this.licensePlate = thePlate
+  }
+
+  public setColour (theColour: string): void {
+    this.colour = theColour
+  }
+
+  public accelerate (accelerationPower: number, accelerationTime: number): void {
+    this.speed = accelerationPower * accelerationTime + this.speed
+
+    if (this.speed > this.maxspeed) {
+      this.speed = this.maxspeed
+    }
+  }
+
+  public break (breakPower: number, breakTime: number): void {
+    this.speed = this.speed - breakPower * breakTime
+
+    if (this.speed < 0) {
+      this.speed = 0
+    }
   }
 
   public status (): void {
     console.log(
-      `       --> Speed: ${this.speed}
-        --> MaxSpeed: ${this.maxspeed}
-        --> Number of doors: ${this.dooramount}
-        --> License Plate: ${this.licenseplate}
+      `        --> Speed: ${this.speed}
+        --> MaxSpeed: ${this.maxSpeed}
+        --> Number of doors: ${this.doorAmount}
+        --> License Plate: ${this.licensePlate}
         --> Colour: ${this.colour}`
+    )
+  }
 }
 
 export = Vehicle
-
