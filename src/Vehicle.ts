@@ -13,7 +13,12 @@ class Vehicle {
   public licesnePlate: string
   public colour: string
 
-  constructor (colour: string, licensePlate: string, maxSpeed: number, doorAmount: number) {
+  constructor(
+    colour: string,
+    licensePlate: string,
+    maxSpeed: number,
+    doorAmount: number
+  ) {
     this.licensePlate = licensePlate
     this.colour = colour
     this.maxSpeed = maxSpeed
@@ -21,36 +26,36 @@ class Vehicle {
   }
 
   // getters
-  public getSpeed (): number {
+  public getSpeed(): number {
     return this.speed
   }
 
-  public getMaxSpeed (): number {
+  public getMaxSpeed(): number {
     return this.maxspeed
   }
 
-  public getDoorAmount (): number {
+  public getDoorAmount(): number {
     return this.doorAmount
   }
 
-  public getLicensePlate (): string {
+  public getLicensePlate(): string {
     return this.licensePlate
   }
 
-  public getColour (): string {
+  public getColour(): string {
     return this.colour
   }
 
   // setters
-  public setLicensePlate (thePlate: string): void {
+  public setLicensePlate(thePlate: string): void {
     this.licensePlate = thePlate
   }
 
-  public setColour (theColour: string): void {
+  public setColour(theColour: string): void {
     this.colour = theColour
   }
 
-  public accelerate (accelerationPower: number, accelerationTime: number): void {
+  public accelerate(accelerationPower: number, accelerationTime: number): void {
     this.speed = accelerationPower * accelerationTime + this.speed
 
     if (this.speed > this.maxspeed) {
@@ -58,7 +63,7 @@ class Vehicle {
     }
   }
 
-  public break (breakPower: number, breakTime: number): void {
+  public break(breakPower: number, breakTime: number): void {
     this.speed = this.speed - breakPower * breakTime
 
     if (this.speed < 0) {
@@ -66,7 +71,7 @@ class Vehicle {
     }
   }
 
-  public status (): void {
+  public status(): void {
     console.log(
       `        --> Speed: ${this.speed}
         --> MaxSpeed: ${this.maxSpeed}
