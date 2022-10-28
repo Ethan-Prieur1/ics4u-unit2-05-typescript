@@ -10,14 +10,14 @@ class Vehicle {
   public speed: number = 0
   public maxSpeed: number
   public doorAmount: number
-  public licesnePlate: string
+  public licensePlate: string
   public colour: string
 
   constructor(
     colour: string,
     licensePlate: string,
-    maxSpeed: number,
-    doorAmount: number
+    doorAmount: number,
+    maxSpeed: number
   ) {
     this.licensePlate = licensePlate
     this.colour = colour
@@ -31,7 +31,7 @@ class Vehicle {
   }
 
   public getMaxSpeed(): number {
-    return this.maxspeed
+    return this.maxSpeed
   }
 
   public getDoorAmount(): number {
@@ -58,8 +58,8 @@ class Vehicle {
   public accelerate(accelerationPower: number, accelerationTime: number): void {
     this.speed = accelerationPower * accelerationTime + this.speed
 
-    if (this.speed > this.maxspeed) {
-      this.speed = this.maxspeed
+    if (this.speed > this.maxSpeed) {
+      this.speed = this.maxSpeed
     }
   }
 
